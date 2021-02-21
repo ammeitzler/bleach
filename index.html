@@ -16,7 +16,7 @@
 			</video>
 		</div>
 
-		<audio id="my_audio" src="bleach-audio.mp3" autoplay="true" muted="muted"></audio>
+		<audio id="my_audio" src="bleach-audio.mp3" preload="none" muted="muted"></audio>
 	</body>
 
 	<script>
@@ -31,10 +31,6 @@
 			$("#video_container").fadeIn("xslow");
 		});
 
-		$('#video_container').click(function() {
-			$("#my_audio").get(0).play();
-			$("#my_audio").get(0).muted = false;
-		});
 	</script>
 </html> 
 
