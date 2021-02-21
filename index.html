@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>bleach</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<script src="scripts/jquery-1.6.4.js"></script>
+	</head>
+	<body>
+		<h1 id="start">bleach</h1>
+
+		<div id="video_container">
+			<video autoplay muted loop>
+				<source src="../videos/bleach_grid_final.mp4" type="video/mp4">
+			</video>
+		</div>
+
+		<audio id="my_audio" src="bleach-audio.mp3" autoplay="true" muted="muted"></audio>
+	</body>
+
+	<script>
+		$.fx.speeds.xslow = 3000; 
+
+		$('#start').click(function() {
+			console.log("yes")
+			$(this).fadeOut(500, function() {
+				$(this).css({"display": "block","visibility": "hidden"}); 
+			});
+			$("#my_audio").get(0).play();
+			$("#my_audio").get(0).muted = false;
+			$("#video_container").fadeIn("xslow");
+		});
+	</script>
+</html> 
+
