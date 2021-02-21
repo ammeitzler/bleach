@@ -31,6 +31,10 @@
 			$("#video_container").fadeIn("xslow");
 		});
 
+		$('#video_container').click(function() {
+			$("#my_audio").get(0).play();
+			$("#my_audio").get(0).muted = false;
+		});
 	</script>
 </html> 
 
