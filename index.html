@@ -23,13 +23,17 @@
 		$.fx.speeds.xslow = 3000; 
 
 		$('#start').click(function() {
-			console.log("yes")
 			$(this).fadeOut(500, function() {
 				$(this).css({"display": "block","visibility": "hidden"}); 
 			});
 			$("#my_audio").get(0).play();
 			$("#my_audio").get(0).muted = false;
 			$("#video_container").fadeIn("xslow");
+		});
+
+		$('#video_container').click(function() {
+			$("#my_audio").get(0).play();
+			$("#my_audio").get(0).muted = false;
 		});
 	</script>
 </html> 
