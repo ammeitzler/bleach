@@ -11,7 +11,7 @@
 		<h1 id="start">bleach</h1>
 
 		<div id="video_container">
-			<video autoplay muted loop defaultMuted>
+			<video id="b_video" autoplay muted loop defaultMuted>
 				<source src="../videos/bleach_grid_final1.mp4" type="video/mp4">
 			</video>
 		</div>
@@ -28,12 +28,14 @@
 			});
 			$("#my_audio").get(0).play();
 			$("#my_audio").get(0).muted = false;
+			$("#b_video").get(0).play();
 			$("#video_container").fadeIn("xslow");
 		});
 
 		$('#video_container').click(function() {
 			$("#my_audio").get(0).play();
 			$("#my_audio").get(0).muted = false;
+			$("#b_video").get(0).play();
 		});
 	</script>
 </html> 
